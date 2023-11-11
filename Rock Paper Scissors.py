@@ -1,6 +1,6 @@
 import random
-# Tic Tac toe
 
+# Function used to get user's choice
 def get_user_choice():
     choice = input("Enter your choice (Rock/Paper/Scissors): ")
     while choice.lower() not in ['rock', 'paper', 'scissors']:
@@ -11,6 +11,7 @@ def get_bot_choice():
     choices = ['rock', 'paper', 'scissors']
     return random.choice(choices)
 
+# Function used to decide the winner
 def decide_winner():
     if user_choice == bot_choice:
         print("It is a tie!")
