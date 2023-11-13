@@ -41,11 +41,11 @@ def get_user_choice():
 
 def main():
     print("Dice roll sim")
-    roll_list = []
+    roll_list = []    # Creates list used to record previous rolls
     show_menu()
     menu_choice = get_user_choice()
 
-    while menu_choice != 'q':
+    while menu_choice != 'q':               # Quit program is q/Q is entered
         if menu_choice == 'a':
             result = dice_roll_1d6()        # record roll to variable
             roll_list.append(result)        # record roll to previous roll list
@@ -55,7 +55,7 @@ def main():
         elif menu_choice == 'c':
             result = dice_roll_1d20()
             roll_list.append(result)
-        elif menu_choice == 'd':
+        elif menu_choice == 'd':            # displays previous roll list 
             print("Previous rolls where: ")
             print(*roll_list, sep=", ")
 
